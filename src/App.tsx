@@ -22,7 +22,7 @@ const App = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const onFormSubmit = (taskName: any) => {
+  const onFormSubmit = (taskName: string | undefined) => {
     fetch("/api/v1/todos", {
       method: "POST",
       headers: {

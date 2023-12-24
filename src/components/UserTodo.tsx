@@ -4,7 +4,7 @@ interface UserTodoI {
   onFormSubmit: (taskName: string | undefined) => void;
 }
 
-const UserTodo: React.FC<UserTodoI> = ({ onFormSubmit }) => {
+const UserTodo = ({ onFormSubmit }: UserTodoI) => {
   const [taskName, setTaskName] = useState<string>();
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
